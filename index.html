@@ -1,0 +1,496 @@
+ <!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>Portfolio Website</title>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />  
+  <link rel="stylesheet" href="style.css" />  
+  <style>  
+    .services {  
+      background: #f8f9fa;  
+      padding: 6rem 2rem;  
+      color: #111;  
+      text-align: center;  
+    }  
+  
+    .section-title {  
+      text-align: center;  
+      font-size: 3rem;  
+      margin-bottom: 4rem;  
+      color: #111;  
+    }  
+  
+    .service-container {  
+      display: grid;  
+      gap: 2.5rem;  
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  
+    }  
+  
+    .service-box {  
+      background: #fff;  
+      padding: 2rem;  
+      border-radius: 12px;  
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);  
+      text-align: center;  
+      transition: all 0.3s ease;  
+    }  
+  
+    .service-box i {  
+      font-size: 3rem;  
+      margin-bottom: 1rem;  
+    }  
+  
+    .service-box h3 {  
+      font-size: 2rem;  
+      margin-bottom: 1rem;  
+    }  
+  
+    .service-box p {  
+      font-size: 1.5rem;  
+      color: #555;  
+    }  
+  
+    .service-box:hover {  
+      transform: translateY(-8px);  
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);  
+    }  
+  </style>  
+</head>  
+<body>  
+  
+<!-- HEADER -->  
+<header class="header animate-header">  
+  <a href="#home" class="logo">MRS SOPHIA <span>PORTFOLIO</span></a>  
+  <nav class="navbar">  
+    <a href="#home" class="active">Home</a>  
+    <a href="#about">About Me</a>  
+    <a href="#skills">Skills</a>  
+    <a href="#services">Service</a>  
+    <a href="#portfolio">Portfolio</a>  
+    <a href="#contact">Contact Me</a>  
+  </nav>  
+</header>  
+  
+<!-- HOME SECTION -->  
+<section class="home" id="home">  
+  <div class="home-img">  
+    <img src="main.jpg" alt="Sophia's Profile Picture" />  
+  </div>  
+  <div class="home-content">  
+    <h1>Hi, It's <span>Sophia</span></h1>  
+    <h3 class="typing-text">I'm a <span id="typing"></span></h3>  
+    <p>  
+      I am a skilled website developer specializing in responsive, user-friendly websites using HTML, CSS,  
+      JavaScript, and modern frameworks. I create custom web solutions that are fast, secure, and scalable.  
+    </p>  
+    <div class="social-icons">  
+      <a href="https://www.fiverr.com/sophia_k6" target="_blank"><i class="fa-solid fa-briefcase"></i></a>  
+      <a href="https://www.instagram.com/expert_website" target="_blank"><i class="fa-brands fa-instagram"></i></a>  
+      <a href="mailto:spwebsitedeveloper30@gmail.com"><i class="fa-solid fa-envelope"></i></a>  
+    </div>  
+    <a href="https://www.fiverr.com/sophia_k6" target="_blank" class="btn">Hire me</a>  
+  </div>  
+</section>  
+  
+<!-- STATS SECTION -->
+<section class="stats-section" id="stats" style="padding: 4rem 2rem; background-color: #1a1a2e; color: #fff; text-align: center;">
+  <h2 class="section-title" style="font-size: 2.5rem; font-weight: 600; margin-bottom: 2rem; color: #007bff;">Professional Achievements</h2>
+  <div class="stats-container" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+    <div class="stat-card" style="background-color: #2d2d44; padding: 2rem; border-radius: 10px; width: 200px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+      <i class="fas fa-briefcase stat-icon" style="font-size: 2rem; color: #007bff; margin-bottom: 1rem;"></i>
+      <h3 class="counter" data-target="6" style="font-size: 2rem; font-weight: 700; color: #fff; margin: 0.5rem 0;">0</h3>
+      <p style="font-size: 1rem; color: #bbb; margin: 0;">Years of Experience</p>
+    </div>
+    <div class="stat-card" style="background-color: #2d2d44; padding: 2rem; border-radius: 10px; width: 200px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+      <i class="fas fa-check-circle stat-icon" style="font-size: 2rem; color: #007bff; margin-bottom: 1rem;"></i>
+      <h3 class="counter" data-target="230" style="font-size: 2rem; font-weight: 700; color: #fff; margin: 0.5rem 0;">0</h3>
+      <p style="font-size: 1rem; color: #bbb; margin: 0;">Projects Completed</p>
+    </div>
+    <div class="stat-card" style="background-color: #2d2d44; padding: 2rem; border-radius: 10px; width: 200px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+      <i class="fas fa-laptop-code stat-icon" style="font-size: 2rem; color: #007bff; margin-bottom: 1rem;"></i>
+      <h3 class="counter" data-target="165" style="font-size: 2rem; font-weight: 700; color: #fff; margin: 0.5rem 0;">0</h3>
+      <p style="font-size: 1rem; color: #bbb; margin: 0;">Technologies Mastered</p>
+    </div>
+    <div class="stat-card" style="background-color: #2d2d44; padding: 2rem; border-radius: 10px; width: 200px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+      <i class="fas fa-users stat-icon" style="font-size: 2rem; color: #007bff; margin-bottom: 1rem;"></i>
+      <h3 class="counter" data-target="200" style="font-size: 2rem; font-weight: 700; color: #fff; margin: 0.5rem 0;">0</h3>
+      <p style="font-size: 1rem; color: #bbb; margin: 0;">Satisfied Clients</p>
+    </div>
+  </div>
+</section>
+  
+<!-- ABOUT SECTION -->
+<section id="about" class="about-rect-section" style="padding: 4rem 2rem; background-color: #1a1a2e; color: #fff; display: flex; justify-content: center; align-items: center;">
+  <div class="about-rect-container" style="max-width: 1200px; display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+    <div class="about-rect-image" style="flex: 1; min-width: 300px;">
+      <img src="main.jpg" alt="Sophia" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);"/>
+    </div>
+    <div class="about-rect-text" style="flex: 2; min-width: 300px;">
+      <h2 style="font-size: 2.5rem; font-weight: 600; color: #007bff; margin-bottom: 1rem;">ABOUT ME</h2>
+      <p style="font-size: 1.1rem; color: #bbb; line-height: 1.6; margin-bottom: 1rem;">
+        I'm <strong style="color: #fff;">Sophia</strong>, a professional website designer with over <strong style="color: #fff;">6 years</strong> of experience in creating beautiful, responsive, and SEO-optimized websites.  
+        Whether you need a custom site, an e-commerce store, or a redesign, I'm here to help bring your ideas to life.
+      </p>
+      <p style="font-size: 1.1rem; color: #bbb; line-height: 1.6; margin-bottom: 1.5rem;">
+        I focus on delivering high-quality designs that look great and function perfectly across all devices.  
+        Let's build a website that supports your business growth.
+      </p>
+      <a href="https://www.fiverr.com/sophia_k6" target="_blank" class="btn" style="display: inline-block; background-color: #007bff; color: #fff; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 6px; transition: background-color 0.3s;">
+        Let's Work Together
+      </a>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const aboutContainer = document.querySelector('.about-rect-container');
+          const image = document.querySelector('.about-rect-image');
+          const text = document.querySelector('.about-rect-text');
+
+          const io = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                // Remove existing classes to reset animation
+                image.classList.remove('fade-in-left');
+                text.classList.remove('fade-in-right');
+                // Force reflow to restart animation
+                void image.offsetWidth;
+                void text.offsetWidth;
+                // Add classes to trigger animation
+                image.classList.add('fade-in-left');
+                text.classList.add('fade-in-right');
+              }
+            });
+          }, {
+            threshold: 0.5
+          });
+
+          if (aboutContainer) {
+            io.observe(aboutContainer);
+          }
+        });
+      </script>
+      <style>
+        .fade-in-left {
+          animation: fadeInLeft 1s ease-out forwards;
+        }
+        .fade-in-right {
+          animation: fadeInRight 1s ease-out forwards;
+        }
+        @keyframes fadeInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        @keyframes fadeInRight {
+          from {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      </style>
+    </div>
+  </div>
+</section>
+  
+<!-- ====== SKILLS SECTION ====== -->
+<section id="skills" class="skills-section" style="padding: 5rem 2rem; background: linear-gradient(135deg, #1a1a2e, #0d0d1a); color: #fff; text-align: center; position: relative; overflow: hidden;">
+  <h2 class="section-title" style="font-size: 2.8rem; font-weight: 700; color: #00aaff; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 2px; position: relative;">
+    Professional Competencies
+    <span style="display: block; width: 50px; height: 3px; background-color: #00aaff; margin: 0.5rem auto 0; border-radius: 2px;"></span>
+  </h2>
+  <p class="section-subtitle" style="font-size: 1.2rem; color: #d3d3d3; max-width: 700px; margin: 0 auto 3rem; line-height: 1.8; font-weight: 300;">
+    A comprehensive overview of my expertise in cutting-edge web development technologies and platforms.
+  </p>
+  
+  <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; max-width: 1300px; margin: 0 auto; position: relative; z-index: 1;">
+    <div class="skill-item" style="background: linear-gradient(145deg, #2d2d44, #25253a); padding: 2rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);">
+      <div class="skill-header" style="display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 600; color: #e0e0e0; margin-bottom: 1.5rem; text-transform: capitalize;">
+        <span>HTML5</span><span>95%</span>
+      </div>
+      <div class="skill-bar" style="height: 12px; background-color: #3a3a50; border-radius: 6px; overflow: hidden; position: relative;">
+        <div class="skill-fill" data-fill="95" style="height: 100%; background: linear-gradient(90deg, #00aaff, #00d4ff); width: 0%; animation: fillAnimation 20s infinite;"></div>
+      </div>
+    </div>
+    <div class="skill-item" style="background: linear-gradient(145deg, #2d2d44, #25253a); padding: 2rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);">
+      <div class="skill-header" style="display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 600; color: #e0e0e0; margin-bottom: 1.5rem; text-transform: capitalize;">
+        <span>CSS3</span><span>90%</span>
+      </div>
+      <div class="skill-bar" style="height: 12px; background-color: #3a3a50; border-radius: 6px; overflow: hidden; position: relative;">
+        <div class="skill-fill" data-fill="90" style="height: 100%; background: linear-gradient(90deg, #00aaff, #00d4ff); width: 0%; animation: fillAnimation 20s infinite;"></div>
+      </div>
+    </div>
+    <div class="skill-item" style="background: linear-gradient(145deg, #2d2d44, #25253a); padding: 2rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);">
+      <div class="skill-header" style="display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 600; color: #e0e0e0; margin-bottom: 1.5rem; text-transform: capitalize;">
+        <span>JavaScript</span><span>85%</span>
+      </div>
+      <div class="skill-bar" style="height: 12px; background-color: #3a3a50; border-radius: 6px; overflow: hidden; position: relative;">
+        <div class="skill-fill" data-fill="85" style="height: 100%; background: linear-gradient(90deg, #00aaff, #00d4ff); width: 0%; animation: fillAnimation 20s infinite;"></div>
+      </div>
+    </div>
+    <div class="skill-item" style="background: linear-gradient(145deg, #2d2d44, #25253a); padding: 2rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);">
+      <div class="skill-header" style="display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 600; color: #e0e0e0; margin-bottom: 1.5rem; text-transform: capitalize;">
+        <span>React</span><span>80%</span>
+      </div>
+      <div class="skill-bar" style="height: 12px; background-color: #3a3a50; border-radius: 6px; overflow: hidden; position: relative;">
+        <div class="skill-fill" data-fill="80" style="height: 100%; background: linear-gradient(90deg, #00aaff, #00d4ff); width: 0%; animation: fillAnimation 20s infinite;"></div>
+      </div>
+    </div>
+    <div class="skill-item" style="background: linear-gradient(145deg, #2d2d44, #25253a); padding: 2rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);">
+      <div class="skill-header" style="display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 600; color: #e0e0e0; margin-bottom: 1.5rem; text-transform: capitalize;">
+        <span>WordPress</span><span>90%</span>
+      </div>
+      <div class="skill-bar" style="height: 12px; background-color: #3a3a50; border-radius: 6px; overflow: hidden; position: relative;">
+        <div class="skill-fill" data-fill="90" style="height: 100%; background: linear-gradient(90deg, #00aaff, #00d4ff); width: 0%; animation: fillAnimation 20s infinite;"></div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes fillAnimation {
+      0% { width: 0%; }
+      50% { width: 95%; } /* Max value for simplicity; adjust dynamically if needed */
+      100% { width: 0%; }
+    }
+    @keyframes itemAnimation {
+      0% { transform: translateY(20px) scale(0.98); opacity: 0; }
+      50% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(20px) scale(0.98); opacity: 0; }
+    }
+
+    .skill-item {
+      animation: itemAnimation 20s infinite ease-in-out;
+    }
+    .skill-fill {
+      animation: fillAnimation 20s infinite;
+    }
+  </style>
+</section>
+  
+<!-- SERVICES SECTION -->  
+<section id="services" class="services-section">  
+  <div class="container">  
+    <h2 class="section-title">Services I Offer</h2>  
+    <div class="services-grid">  
+      <div class="service-card">  
+        <div class="service-icon"><i class="fa-solid fa-code"></i></div>  
+        <h3>Custom Website Development</h3>  
+        <p>Pixel-perfect, responsive websites built with modern tools like React, WordPress, and more--tailored to your brand vision.</p>  
+      </div>  
+      <div class="service-card">  
+        <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>  
+        <h3>E-Commerce Integration</h3>  
+        <p>Set up secure and scalable online stores with optimized checkout flows, payment gateways, and mobile-first UX.</p>  
+      </div>  
+      <div class="service-card">  
+        <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>  
+        <h3>Website Redesign & Optimization</h3>  
+        <p>Revamp your website for a modern UI, better performance, and enhanced structure that converts visitors into customers.</p>  
+      </div>  
+      <div class="service-card">  
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>  
+        <h3>Mobile-First Design</h3>  
+        <p>Guarantee flawless mobile experiences with adaptive layouts, responsive elements, and touch-friendly interactions.</p>  
+      </div>  
+    </div>  
+  </div>  
+</section>  
+<!-- PORTFOLIO TABLE SECTION -->  
+<section id="portfolio" class="portfolio-
+    <h2 class="section-title">Live Website Portfolio</h2>  
+    <p class="section-subtitle">Explore a curated list of professional websites I've worked with or admire for inspiration.</p>  
+  
+    <table class="portfolio-table" style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif;">  
+      <thead style="background: #111; color: #fff;">  
+        <tr>  
+          <th style="padding: 12px; text-align: left;">#</th>  
+          <th style="padding: 12px; text-align: left;">Website Link</th>  
+        </tr>  
+      </thead>  
+      <tbody>  
+        <tr>  
+          <td style="padding: 12px; border-bottom: 1px solid #ccc;">1</td>  
+          <td style="padding: 12px; border-bottom: 1px solid #ccc;">  
+            <a href="https://goldenspa.co.in/" target="_blank" style="color: #007bff;">https://goldenspa.co.in/</a>  
+          </td>  
+        </tr>  
+        <tr>  
+          <td style="padding: 12px; border-bottom: 1px solid #ccc;">2</td>  
+          <td style="padding: 12px; border-bottom: 1px solid #ccc;">  
+            <a href="https://www.probytemedia.com/" target="_blank" style="color: #007bff;">https://www.probytemedia.com/</a>  
+          </td>  
+        </tr>  
+        <tr>  
+          <td style="padding: 12px; border-bottom: 1px solid #ccc;">3</td>  
+          <td style="padding: 12px; border-bottom: 1px solid #ccc;">  
+            <a href="https://alphatotem.com/" target="_blank" style="color: #007bff;">https://alphatotem.com/</a>  
+          </td>  
+        </tr>  
+        <tr>  
+          <td style="padding: 12px; border-bottom: 1px solid #ccc;">4</td>  
+          <td style="padding: 12px; border-bottom: 1px solid #ccc;">  
+            <a href="https://empirespa.in/" target="_blank" style="color: #007bff;">https://empirespa.in/</a>  
+          </td>  
+        </tr>  
+        <tr>  
+          <td style="padding: 12px;">5</td>  
+          <td style="padding: 12px;">  
+            <a href="https://skyspawellnesscenter.com/" target="_blank" style="color: #007bff;">https://skyspawellnesscenter.com/</a>  
+          </td>  
+        </tr>  
+      </tbody>  
+    </table>  
+  </div>  
+</section>  
+<!-- CONTACT SECTION -->
+<section id="contact" style="padding: 6rem 2rem; background-color: #1a1a2e;">
+  <div class="container" style="max-width: 800px; margin: auto; text-align: center;">
+    <h2 class="section-title" style="font-size: 3rem; margin-bottom: 1rem; color: #fff;">Contact Me</h2>
+    <p class="section-subtitle" style="font-size: 1.2rem; color: #bbb; margin-bottom: 2.5rem;">
+      Reach out for collaborations or just say hello 👋
+    </p>
+
+    <form action="https://formspree.io/f/mqabnzwg" method="POST"
+      style="display: flex; flex-direction: column; gap: 1.5rem; text-align: left;">
+      
+      <input type="text" name="name" placeholder="Your Name" required
+        style="padding: 1rem; border: 1px solid #444; border-radius: 8px; font-size: 1rem; color: #fff; background-color: #2d2d44;" />
+      
+      <input type="email" name="email" placeholder="Your Email" required
+        style="padding: 1rem; border: 1px solid #444; border-radius: 8px; font-size: 1rem; color: #fff; background-color: #2d2d44;" />
+      
+      <textarea name="message" rows="5" placeholder="Your Message" required
+        style="padding: 1rem; border: 1px solid #444; border-radius: 8px; font-size: 1rem; color: #fff; background-color: #2d2d44;"></textarea>
+      
+      <button type="submit"
+        style="background-color: #007bff; color: #fff; padding: 1rem 2rem; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer;">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+  
+<!-- JS -->  
+<script>  
+  const typingElement = document.getElementById('typing');  
+  const words = ["Web Developer", "Designer", "UI/UX Expert", "Freelancer", "Creator"];  
+  let wordIndex = 0;  
+  let letterIndex = 0;  
+  let currentWord = '';  
+  let isDeleting = false;  
+  
+  function type() {  
+    if (isDeleting) {  
+      currentWord = words[wordIndex].substring(0, letterIndex--);  
+    } else {  
+      currentWord = words[wordIndex].substring(0, ++letterIndex);  
+    }  
+  
+    typingElement.innerHTML = currentWord;  
+    let delay = isDeleting ? 75 : 150;  
+  
+    if (!isDeleting && letterIndex === words[wordIndex].length) {  
+      delay = 2000;  
+      isDeleting = true;  
+    } else if (isDeleting && letterIndex === 0) {  
+      isDeleting = false;  
+      wordIndex = (wordIndex + 1) % words.length;  
+      delay = 500;  
+    }  
+  
+    setTimeout(type, delay);  
+  }  
+  
+  type();  
+  
+  const counters = document.querySelectorAll('.counter');  
+  const speed = 200;  
+  
+  const runCounter = (counter) => {  
+    const target = +counter.getAttribute('data-target');  
+    const updateCount = () => {  
+      const current = +counter.innerText;  
+      const increment = Math.ceil(target / speed);  
+  
+      if (current < target) {  
+        counter.innerText = current + increment;  
+        setTimeout(updateCount, 20);  
+      } else {  
+        counter.innerText = target + '+';  
+      }  
+    };  
+    updateCount();  
+  };  
+  
+  const observer = new IntersectionObserver(  
+    (entries, observer) => {  
+      entries.forEach(entry => {  
+        if (entry.isIntersecting) {  
+          runCounter(entry.target);  
+          observer.unobserve(entry.target);  
+        }  
+      });  
+    },  
+    { threshold: 0.5 }  
+  );  
+  
+  counters.forEach(counter => observer.observe(counter));  
+</script>  
+}}  
+}  
+<script>  
+  const totalItems = 100;  
+  const itemsPerPage = 5;  
+  const totalPages = Math.ceil(totalItems / itemsPerPage);  
+  const tableBody = document.getElementById('table-body');  
+  const prevBtn = document.getElementById('prev-btn');  
+  const nextBtn = document.getElementById('next-btn');  
+  const pageIndicator = document.getElementById('page-indicator');  
+  
+  let currentPage = 1;  
+  
+  function renderTable(page) {  
+    tableBody.innerHTML = '';  
+    const start = (page - 1) * itemsPerPage + 1;  
+    const end = Math.min(start + itemsPerPage - 1, totalItems);  
+  
+    for (let i = start; i <= end; i++) {  
+      const row = document.createElement('tr');  
+      row.innerHTML = `  
+        <td>${i}</td>  
+        <td><a href="https://example.com/page${i}" target="_blank">https://example.com/page${i}</a></td>  
+      `;  
+      tableBody.appendChild(row);  
+    }  
+  
+    pageIndicator.textContent = `Page ${page} of ${totalPages}`;  
+    prevBtn.disabled = page === 1;  
+    nextBtn.disabled = page === totalPages;  
+  }  
+  
+  prevBtn.addEventListener('click', () => {  
+    if (currentPage > 1) {  
+      currentPage--;  
+      renderTable(currentPage);  
+    }  
+  });  
+  
+  nextBtn.addEventListener('click', () => {  
+    if (currentPage < totalPages) {  
+      currentPage++;  
+      renderTable(currentPage);  
+    }  
+  });  
+  
+  renderTable(currentPage);  
+</script>  
+  
+</body>  
+</html>
