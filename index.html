@@ -94,31 +94,63 @@
 </section>  
   
 <!-- STATS SECTION -->
-<section class="stats-section" id="stats" style="padding: 4rem 2rem; background-color: #1a1a2e; color: #fff; text-align: center;">
-  <h2 class="section-title" style="font-size: 2.5rem; font-weight: 600; margin-bottom: 2rem; color: #007bff;">Professional Achievements</h2>
-  <div class="stats-container" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-    <div class="stat-card" style="background-color: #2d2d44; padding: 2rem; border-radius: 10px; width: 200px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-      <i class="fas fa-briefcase stat-icon" style="font-size: 2rem; color: #007bff; margin-bottom: 1rem;"></i>
-      <h3 class="counter" data-target="6" style="font-size: 2rem; font-weight: 700; color: #fff; margin: 0.5rem 0;">0</h3>
-      <p style="font-size: 1rem; color: #bbb; margin: 0;">Years of Experience</p>
+  <section class="stats-section" id="stats">
+    <h2 class="section-title">Professional Achievements</h2>
+    <div class="stats-container">
+      <div class="stat-card">
+        <i class="fas fa-briefcase stat-icon"></i>
+        <h3 class="counter" data-target="6">0</h3>
+        <p>Years of Experience</p>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-check-circle stat-icon"></i>
+        <h3 class="counter" data-target="230">0</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-laptop-code stat-icon"></i>
+        <h3 class="counter" data-target="165">0</h3>
+        <p>Technologies Mastered</p>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-users stat-icon"></i>
+        <h3 class="counter" data-target="200">0</h3>
+        <p>Satisfied Clients</p>
+      </div>
     </div>
-    <div class="stat-card" style="background-color: #2d2d44; padding: 2rem; border-radius: 10px; width: 200px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-      <i class="fas fa-check-circle stat-icon" style="font-size: 2rem; color: #007bff; margin-bottom: 1rem;"></i>
-      <h3 class="counter" data-target="230" style="font-size: 2rem; font-weight: 700; color: #fff; margin: 0.5rem 0;">0</h3>
-      <p style="font-size: 1rem; color: #bbb; margin: 0;">Projects Completed</p>
-    </div>
-    <div class="stat-card" style="background-color: #2d2d44; padding: 2rem; border-radius: 10px; width: 200px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-      <i class="fas fa-laptop-code stat-icon" style="font-size: 2rem; color: #007bff; margin-bottom: 1rem;"></i>
-      <h3 class="counter" data-target="165" style="font-size: 2rem; font-weight: 700; color: #fff; margin: 0.5rem 0;">0</h3>
-      <p style="font-size: 1rem; color: #bbb; margin: 0;">Technologies Mastered</p>
-    </div>
-    <div class="stat-card" style="background-color: #2d2d44; padding: 2rem; border-radius: 10px; width: 200px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-      <i class="fas fa-users stat-icon" style="font-size: 2rem; color: #007bff; margin-bottom: 1rem;"></i>
-      <h3 class="counter" data-target="200" style="font-size: 2rem; font-weight: 700; color: #fff; margin: 0.5rem 0;">0</h3>
-      <p style="font-size: 1rem; color: #bbb; margin: 0;">Satisfied Clients</p>
-    </div>
-  </div>
-</section>
+  </section>
+
+  <!-- JavaScript for counter animation -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 200; // Adjust speed of animation
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCounter, 10); // Adjust delay for smoother animation
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      // Trigger counter animation when the section is in view
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            updateCounter();
+            observer.unobserve(counter); // Stop observing after animation starts
+          }
+        });
+      }, { threshold: 0.5 });
+
+      observer.observe(counter);
+    });
+  </script>
   
 <!-- ABOUT SECTION -->
 <section id="about" class="about-rect-section" style="padding: 4rem 2rem; background-color: #1a1a2e; color: #fff; display: flex; justify-content: center; align-items: center;">
@@ -252,7 +284,6 @@
       </div>
     </div>
   </div>
-
   <style>
     @keyframes fillAnimation {
       0% { width: 0%; }
